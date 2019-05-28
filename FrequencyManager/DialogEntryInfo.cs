@@ -34,7 +34,8 @@ namespace SDRSharp.FrequencyManager
             ValidateForm();
         }
 
-        private void ValidateForm(){
+        private void ValidateForm()
+        {
             bool valid = textBoxName.Text != null && !"".Equals(textBoxName.Text.Trim())
                 && comboGroupName.Text != null && !"".Equals(comboGroupName.Text.Trim())
                 && frequencyNumericUpDown.Value != 0 && nudFilterBandwidth.Value!=0;

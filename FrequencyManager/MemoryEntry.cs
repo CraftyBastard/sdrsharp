@@ -33,7 +33,7 @@ namespace SDRSharp.FrequencyManager
             get { return _isFavourite; }
             set { _isFavourite = value; }
         }
-               
+
         public string Name
         {
             get { return _name; }
@@ -46,7 +46,8 @@ namespace SDRSharp.FrequencyManager
             set { _groupName = value; }
         }
 
-        public long Frequency{
+        public long Frequency
+        {
             get { return _frequency; }
             set { _frequency = value; }
         }
@@ -69,5 +70,5 @@ namespace SDRSharp.FrequencyManager
             set { _filterBandwidth = value; }
         }
     }
-              
+
 }

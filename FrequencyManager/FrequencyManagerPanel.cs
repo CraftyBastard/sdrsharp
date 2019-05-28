@@ -13,7 +13,7 @@ namespace SDRSharp.FrequencyManager
     [Category("SDRSharp")]
     [Description("RF Memory Management Panel")]
     public partial class FrequencyManagerPanel : UserControl
-    {       
+    {
         private readonly SortableBindingList<MemoryEntry> _displayedEntries = new SortableBindingList<MemoryEntry>();
         private readonly List<MemoryEntry> _entries;
         private readonly SettingsPersister _settingsPersister;
@@ -37,7 +37,7 @@ namespace SDRSharp.FrequencyManager
                 ProcessGroups(null);
             }
 
-            memoryEntryBindingSource.DataSource = _displayedEntries;            
+            memoryEntryBindingSource.DataSource = _displayedEntries;
         }
 
         public String SelectedGroup
@@ -70,7 +70,7 @@ namespace SDRSharp.FrequencyManager
               + entry.Name + "'?", "Delete Entry", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 _entries.Remove(entry);
-                _settingsPersister.PersistStoredFrequencies(_entries);                
+                _settingsPersister.PersistStoredFrequencies(_entries);
                 _displayedEntries.Remove(entry);
             }
         }
@@ -97,7 +97,7 @@ namespace SDRSharp.FrequencyManager
                         ((string)comboGroups.SelectedItem == FavouriteGroup && memoryEntry.IsFavourite))
                     {
                         if (isNew)
-                            _displayedEntries.Add(memoryEntry);                            
+                            _displayedEntries.Add(memoryEntry);
                     }
                     else
                         comboGroups.SelectedItem = memoryEntry.GroupName;
@@ -151,12 +151,12 @@ namespace SDRSharp.FrequencyManager
             if (comboGroups.SelectedIndex != -1)
             {
                 var selectedGroup = (string) comboGroups.SelectedItem;
-                
+
                 foreach (MemoryEntry entry in _entries)
                 {
                     if (selectedGroup == AllGroups || entry.GroupName == selectedGroup || (selectedGroup == FavouriteGroup && entry.IsFavourite ))
                     {
-                       
+
                         _displayedEntries.Add(entry);
                     }
                 }
@@ -171,7 +171,7 @@ namespace SDRSharp.FrequencyManager
 
         public void Bookmark()
         {
-            
+
             //if (_controlInterface.Frequency == 0) return;
             if (!_controlInterface.IsPlaying) return;
 
@@ -181,7 +181,7 @@ namespace SDRSharp.FrequencyManager
             memoryEntry.Frequency = _controlInterface.Frequency;
             memoryEntry.FilterBandwidth = _controlInterface.FilterBandwidth;
             memoryEntry.Shift = _controlInterface.FrequencyShiftEnabled ? _controlInterface.FrequencyShift : 0;
-            
+
             memoryEntry.GroupName = "Misc";
             if (_controlInterface.DetectorType == DetectorType.WFM)
             {
@@ -200,7 +200,7 @@ namespace SDRSharp.FrequencyManager
             {
                 memoryEntry.Name = GetFrequencyDisplay(_controlInterface.Frequency) + " " + memoryEntry.DetectorType;
             }
-            memoryEntry.IsFavourite = true;
+            memoryEntry.IsFavourite = false;
             DoEdit(memoryEntry, true);
         }
 

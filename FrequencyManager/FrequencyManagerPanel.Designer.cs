@@ -9,8 +9,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose (bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose (bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose ();
             }
             base.Dispose (disposing);
@@ -22,7 +24,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent () {
+        private void InitializeComponent ()
+        {
             int verticalShift = 20;
 
             this.components = new System.ComponentModel.Container ();
@@ -51,7 +54,8 @@
             this.mainToolStrip.AutoSize = false;
             this.mainToolStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.mainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.mainToolStrip.Items.AddRange (new System.Windows.Forms.ToolStripItem[] {
+            this.mainToolStrip.Items.AddRange (new System.Windows.Forms.ToolStripItem[]
+            {
                 this.btnNewEntry,
                     this.btnEdit,
                     this.btnDelete
@@ -113,9 +117,10 @@
                 System.Windows.Forms.AnchorStyles.Right)));
             this.frequencyDataGridView.AutoGenerateColumns = false;
             this.frequencyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.frequencyDataGridView.Columns.AddRange (new System.Windows.Forms.DataGridViewColumn[] {
+            this.frequencyDataGridView.Columns.AddRange (new System.Windows.Forms.DataGridViewColumn[]
+            {
                 this.nameDataGridViewTextBoxColumn,
-                    this.frequencyDataGridViewTextBoxColumn
+                this.frequencyDataGridViewTextBoxColumn
             });
             this.frequencyDataGridView.DataSource = this.memoryEntryBindingSource;
             this.frequencyDataGridView.Location = new System.Drawing.Point (0, verticalShift + 54);

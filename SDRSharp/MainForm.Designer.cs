@@ -2,14 +2,17 @@
 using SDRSharp.CollapsiblePanel;
 using SDRSharp.PanView;
 
-namespace SDRSharp {
-    public partial class MainForm {
+namespace SDRSharp
+{
+    public partial class MainForm
+    {
         #region Windows Form Designer generated code
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent () {
+        private void InitializeComponent ()
+        {
             this.components = new System.ComponentModel.Container ();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager (typeof (MainForm));
             this.openDlg = new System.Windows.Forms.OpenFileDialog ();
@@ -371,21 +374,23 @@ namespace SDRSharp {
             // frequencyShiftNumericUpDown
             //
             this.frequencyShiftNumericUpDown.Enabled = false;
-            this.frequencyShiftNumericUpDown.Font = new System.Drawing.Font ("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.frequencyShiftNumericUpDown.Increment = new decimal (new int[] {
+            this.frequencyShiftNumericUpDown.Increment = new decimal (new int[]
+            {
                 1000,
                 0,
                 0,
                 0
             });
             this.frequencyShiftNumericUpDown.Location = new System.Drawing.Point (70, 72);
-            this.frequencyShiftNumericUpDown.Maximum = new decimal (new int[] {
+            this.frequencyShiftNumericUpDown.Maximum = new decimal (new int[]
+            {
                 276447232,
                 23283,
                 0,
                 0
             });
-            this.frequencyShiftNumericUpDown.Minimum = new decimal (new int[] {
+            this.frequencyShiftNumericUpDown.Minimum = new decimal (new int[]
+            {
                 276447232,
                 23283,
                 0,
@@ -511,13 +516,15 @@ namespace SDRSharp {
             //
             this.cwShiftNumericUpDown.Enabled = false;
             this.cwShiftNumericUpDown.Location = new System.Drawing.Point (111, 183);
-            this.cwShiftNumericUpDown.Maximum = new decimal (new int[] {
+            this.cwShiftNumericUpDown.Maximum = new decimal (new int[]
+            {
                 2000,
                 0,
                 0,
                 0
             });
-            this.cwShiftNumericUpDown.Minimum = new decimal (new int[] {
+            this.cwShiftNumericUpDown.Minimum = new decimal (new int[]
+            {
                 2000,
                 0,
                 0,
@@ -527,7 +534,8 @@ namespace SDRSharp {
             this.cwShiftNumericUpDown.Size = new System.Drawing.Size (94, 20);
             this.cwShiftNumericUpDown.TabIndex = 19;
             this.cwShiftNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.cwShiftNumericUpDown.Value = new decimal (new int[] {
+            this.cwShiftNumericUpDown.Value = new decimal (new int[]
+            {
                 600,
                 0,
                 0,
@@ -571,7 +579,8 @@ namespace SDRSharp {
             //
             this.stepSizeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.stepSizeComboBox.FormattingEnabled = true;
-            this.stepSizeComboBox.Items.AddRange (new object[] {
+            this.stepSizeComboBox.Items.AddRange (new object[]
+            {
                 "1 Hz",
                 "10 Hz",
                 "100 Hz",
@@ -618,20 +627,23 @@ namespace SDRSharp {
             //
             // filterBandwidthNumericUpDown
             //
-            this.filterBandwidthNumericUpDown.Increment = new decimal (new int[] {
+            this.filterBandwidthNumericUpDown.Increment = new decimal (new int[]
+            {
                 10,
                 0,
                 0,
                 0
             });
             this.filterBandwidthNumericUpDown.Location = new System.Drawing.Point (6, 143);
-            this.filterBandwidthNumericUpDown.Maximum = new decimal (new int[] {
+            this.filterBandwidthNumericUpDown.Maximum = new decimal (new int[]
+            {
                 250000,
                 0,
                 0,
                 0
             });
-            this.filterBandwidthNumericUpDown.Minimum = new decimal (new int[] {
+            this.filterBandwidthNumericUpDown.Minimum = new decimal (new int[]
+            {
                 10,
                 0,
                 0,
@@ -641,7 +653,8 @@ namespace SDRSharp {
             this.filterBandwidthNumericUpDown.Size = new System.Drawing.Size (94, 20);
             this.filterBandwidthNumericUpDown.TabIndex = 15;
             this.filterBandwidthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.filterBandwidthNumericUpDown.Value = new decimal (new int[] {
+            this.filterBandwidthNumericUpDown.Value = new decimal (new int[]
+            {
                 10000,
                 0,
                 0,
@@ -651,20 +664,23 @@ namespace SDRSharp {
             //
             // filterOrderNumericUpDown
             //
-            this.filterOrderNumericUpDown.Increment = new decimal (new int[] {
+            this.filterOrderNumericUpDown.Increment = new decimal (new int[]
+            {
                 10,
                 0,
                 0,
                 0
             });
             this.filterOrderNumericUpDown.Location = new System.Drawing.Point (111, 143);
-            this.filterOrderNumericUpDown.Maximum = new decimal (new int[] {
+            this.filterOrderNumericUpDown.Maximum = new decimal (new int[]
+            {
                 9999,
                 0,
                 0,
                 0
             });
-            this.filterOrderNumericUpDown.Minimum = new decimal (new int[] {
+            this.filterOrderNumericUpDown.Minimum = new decimal (new int[]
+            {
                 10,
                 0,
                 0,
@@ -674,7 +690,8 @@ namespace SDRSharp {
             this.filterOrderNumericUpDown.Size = new System.Drawing.Size (94, 20);
             this.filterOrderNumericUpDown.TabIndex = 16;
             this.filterOrderNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.filterOrderNumericUpDown.Value = new decimal (new int[] {
+            this.filterOrderNumericUpDown.Value = new decimal (new int[]
+            {
                 400,
                 0,
                 0,
@@ -706,7 +723,8 @@ namespace SDRSharp {
             //
             this.filterTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterTypeComboBox.FormattingEnabled = true;
-            this.filterTypeComboBox.Items.AddRange (new object[] {
+            this.filterTypeComboBox.Items.AddRange (new object[]
+            {
                 "Hamming",
                 "Blackman",
                 "Blackman-Harris 4",
@@ -788,13 +806,15 @@ namespace SDRSharp {
             // latencyNumericUpDown
             //
             this.latencyNumericUpDown.Location = new System.Drawing.Point (125, 151);
-            this.latencyNumericUpDown.Maximum = new decimal (new int[] {
+            this.latencyNumericUpDown.Maximum = new decimal (new int[]
+            {
                 2000,
                 0,
                 0,
                 0
             });
-            this.latencyNumericUpDown.Minimum = new decimal (new int[] {
+            this.latencyNumericUpDown.Minimum = new decimal (new int[]
+            {
                 1,
                 0,
                 0,
@@ -804,7 +824,8 @@ namespace SDRSharp {
             this.latencyNumericUpDown.Size = new System.Drawing.Size (79, 20);
             this.latencyNumericUpDown.TabIndex = 4;
             this.latencyNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.latencyNumericUpDown.Value = new decimal (new int[] {
+            this.latencyNumericUpDown.Value = new decimal (new int[]
+            {
                 1,
                 0,
                 0,
@@ -842,7 +863,8 @@ namespace SDRSharp {
             // sampleRateComboBox
             //
             this.sampleRateComboBox.FormattingEnabled = true;
-            this.sampleRateComboBox.Items.AddRange (new object[] {
+            this.sampleRateComboBox.Items.AddRange (new object[]
+            {
                 "8000 sample/sec",
                 "11025 sample/sec",
                 "16000 sample/sec",
@@ -942,7 +964,8 @@ namespace SDRSharp {
             // agcSlopeNumericUpDown
             //
             this.agcSlopeNumericUpDown.Location = new System.Drawing.Point (125, 97);
-            this.agcSlopeNumericUpDown.Maximum = new decimal (new int[] {
+            this.agcSlopeNumericUpDown.Maximum = new decimal (new int[]
+            {
                 10,
                 0,
                 0,
@@ -952,7 +975,8 @@ namespace SDRSharp {
             this.agcSlopeNumericUpDown.Size = new System.Drawing.Size (79, 20);
             this.agcSlopeNumericUpDown.TabIndex = 4;
             this.agcSlopeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.agcSlopeNumericUpDown.Value = new decimal (new int[] {
+            this.agcSlopeNumericUpDown.Value = new decimal (new int[]
+            {
                 10,
                 0,
                 0,
@@ -992,13 +1016,15 @@ namespace SDRSharp {
             // agcThresholdNumericUpDown
             //
             this.agcThresholdNumericUpDown.Location = new System.Drawing.Point (125, 47);
-            this.agcThresholdNumericUpDown.Maximum = new decimal (new int[] {
+            this.agcThresholdNumericUpDown.Maximum = new decimal (new int[]
+            {
                 0,
                 0,
                 0,
                 0
             });
-            this.agcThresholdNumericUpDown.Minimum = new decimal (new int[] {
+            this.agcThresholdNumericUpDown.Minimum = new decimal (new int[]
+            {
                 160,
                 0,
                 0,
@@ -1013,13 +1039,15 @@ namespace SDRSharp {
             // agcDecayNumericUpDown
             //
             this.agcDecayNumericUpDown.Location = new System.Drawing.Point (125, 72);
-            this.agcDecayNumericUpDown.Maximum = new decimal (new int[] {
+            this.agcDecayNumericUpDown.Maximum = new decimal (new int[]
+            {
                 2000,
                 0,
                 0,
                 0
             });
-            this.agcDecayNumericUpDown.Minimum = new decimal (new int[] {
+            this.agcDecayNumericUpDown.Minimum = new decimal (new int[]
+            {
                 10,
                 0,
                 0,
@@ -1029,7 +1057,8 @@ namespace SDRSharp {
             this.agcDecayNumericUpDown.Size = new System.Drawing.Size (79, 20);
             this.agcDecayNumericUpDown.TabIndex = 3;
             this.agcDecayNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.agcDecayNumericUpDown.Value = new decimal (new int[] {
+            this.agcDecayNumericUpDown.Value = new decimal (new int[]
+            {
                 2000,
                 0,
                 0,
@@ -1249,7 +1278,8 @@ namespace SDRSharp {
             //
             this.fftResolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fftResolutionComboBox.FormattingEnabled = true;
-            this.fftResolutionComboBox.Items.AddRange (new object[] {
+            this.fftResolutionComboBox.Items.AddRange (new object[]
+            {
                 "512",
                 "1024",
                 "2048",
@@ -1293,7 +1323,8 @@ namespace SDRSharp {
             //
             this.viewComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.viewComboBox.FormattingEnabled = true;
-            this.viewComboBox.Items.AddRange (new object[] {
+            this.viewComboBox.Items.AddRange (new object[]
+            {
                 "Spectrum Analyzer",
                 "Waterfall",
                 "Both"
@@ -1318,7 +1349,8 @@ namespace SDRSharp {
             //
             this.fftWindowComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fftWindowComboBox.FormattingEnabled = true;
-            this.fftWindowComboBox.Items.AddRange (new object[] {
+            this.fftWindowComboBox.Items.AddRange (new object[]
+            {
                 "None",
                 "Hamming",
                 "Blackman",

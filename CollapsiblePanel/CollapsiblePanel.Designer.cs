@@ -23,7 +23,7 @@ namespace SDRSharp.CollapsiblePanel
         #region Component Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify 
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -37,15 +37,15 @@ namespace SDRSharp.CollapsiblePanel
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.togglingImage)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // collapsiblePanelImageList
-            // 
+            //
             this.collapsiblePanelImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("collapsiblePanelImageList.ImageStream")));
             this.collapsiblePanelImageList.TransparentColor = System.Drawing.Color.Transparent;
             this.collapsiblePanelImageList.Images.SetKeyName(0, "ExpandIcon.jpg");
-            // 
+            //
             // titlePanel
-            // 
+            //
             this.titlePanel.BackColor = System.Drawing.Color.DarkGray;
             this.titlePanel.BackgroundImage = global::SDRSharp.CollapsiblePanel.Properties.Resources.titleBackground;
             this.titlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -56,21 +56,21 @@ namespace SDRSharp.CollapsiblePanel
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Size = new System.Drawing.Size(150, 20);
             this.titlePanel.TabIndex = 0;
-            // 
+            //
             // lblPanelTitle
-            // 
+            //
             this.lblPanelTitle.AutoSize = true;
             this.lblPanelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblPanelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPanelTitle.Font = new System.Drawing.Font("Ubuntu", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPanelTitle.Location = new System.Drawing.Point(22, 3);
             this.lblPanelTitle.Name = "lblPanelTitle";
             this.lblPanelTitle.Size = new System.Drawing.Size(64, 13);
             this.lblPanelTitle.TabIndex = 1;
             this.lblPanelTitle.Text = "Panel title";
             this.lblPanelTitle.Click += new System.EventHandler(this.ToggleState);
-            // 
+            //
             // togglingImage
-            // 
+            //
             this.togglingImage.BackColor = System.Drawing.Color.Transparent;
             this.togglingImage.Image = global::SDRSharp.CollapsiblePanel.Properties.Resources.ExpandedIcon;
             this.togglingImage.Location = new System.Drawing.Point(3, 3);
@@ -79,9 +79,9 @@ namespace SDRSharp.CollapsiblePanel
             this.togglingImage.TabIndex = 0;
             this.togglingImage.TabStop = false;
             this.togglingImage.Click += new System.EventHandler(this.ToggleState);
-            // 
+            //
             // CollapsiblePanel
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.titlePanel);

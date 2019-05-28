@@ -151,7 +151,7 @@ namespace SDRSharp
         {
             get { return _streamControl.IsPlaying; }
         }
-        
+
         public long Frequency
         {
             get { return vfoFrequencyEdit.Frequency; }
@@ -386,7 +386,7 @@ namespace SDRSharp
         {
             get { return _stepSize; }
         }
-        
+
         #endregion
 
         #region Initialization and Termination
@@ -396,7 +396,7 @@ namespace SDRSharp
             _streamControl = new StreamControl(_streamHookManager);
 
             InitializeComponent();
-            InitializeGUI();            
+            InitializeGUI();
             InitialiseSharpPlugins();
         }
 
@@ -556,7 +556,7 @@ namespace SDRSharp
             }
 
             panSplitContainer.SplitterDistance = Utils.GetIntSetting("splitterPosition", panSplitContainer.SplitterDistance);
-            
+
             #endregion
 
             #region FFT display
@@ -574,7 +574,7 @@ namespace SDRSharp
             fftResolutionComboBox.SelectedIndex = Utils.GetIntSetting("fftResolution", 3);
             fftWindowComboBox.SelectedIndex = Utils.GetIntSetting("fftWindowType", (int) WindowType.BlackmanHarris4);
             filterTypeComboBox.SelectedIndex = Utils.GetIntSetting("filterType", (int) WindowType.BlackmanHarris4 - 1);
-            
+
             fftSpeedTrackBar.Value = Utils.GetIntSetting("fftSpeed", 40);
             fftSpeedTrackBar_ValueChanged(null, null);
 
@@ -721,12 +721,12 @@ namespace SDRSharp
             }
 
             #region ISharpPlugin Teardown
-            
+
             foreach(var plugin in _sharpPlugins.Values)
             {
                 plugin.Close();
             }
-            
+
             #endregion
 
             _modeStates[_vfo.DetectorType] = GetModeState();
@@ -914,10 +914,10 @@ namespace SDRSharp
 
         private void iqTimer_Tick(object sender, EventArgs e)
         {
-            Text = string.Format(_baseTitle + " - IQ Imbalance: Gain = {0:F3} Phase = {1:F3}�", _iqBalancer.Gain, _iqBalancer.Phase * 180 / Math.PI);
+            Text = string.Format(_baseTitle + " - IQ Imbalance: Gain = {0:F3} Phase = {1:F3} - 🐧", _iqBalancer.Gain, _iqBalancer.Phase * 180 / Math.PI);
             if (_vfo.SignalIsStereo)
             {
-                Text += " ((( stereo )))";
+                Text += " 🔊 🎧";
             }
 
             spectrumAnalyzer.StatusText = string.Empty;
@@ -990,7 +990,7 @@ namespace SDRSharp
                 vfoFrequencyEdit.Frequency = _frequencyShift;
                 return;
             }
-            
+
             configureSourceButton.Enabled = true;
 
             if (SourceIsWaveFile)
@@ -1476,7 +1476,7 @@ namespace SDRSharp
             SetModeState(_modeStates[_vfo.DetectorType]);
             NotifyPropertyChanged("DetectorType");
         }
-        
+
         private void fmStereoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             _vfo.FmStereo = fmStereoCheckBox.Checked;
@@ -1613,7 +1613,7 @@ namespace SDRSharp
             FilterBandwidth = state[0];
             FilterOrder = state[1];
             FilterType = (WindowType) state[2];
-            
+
             _configuringSquelch = true;
             SquelchThreshold = state[3];
             SquelchEnabled = state[4] == 1;
@@ -1621,7 +1621,7 @@ namespace SDRSharp
             useSquelchCheckBox_CheckedChanged(null, null);
 
             CWShift = state[5];
-            
+
             _configuringSnap = true;
             SnapToGrid = state[6] == 1;
             stepSizeComboBox.SelectedIndex = state[7];
@@ -1631,7 +1631,7 @@ namespace SDRSharp
             unityGainCheckBox.Checked = state[8] == 1;
             unityGainCheckBox_CheckStateChanged(null, null);
         }
-       
+
         #endregion
 
         #endregion
@@ -1685,7 +1685,7 @@ namespace SDRSharp
         }
 
         #endregion
-        
+
         #region Display settings
 
         private void viewComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1853,7 +1853,7 @@ namespace SDRSharp
         }
 
         #endregion
-        
+
         #region Plugin Methods
 
         private void InitialiseSharpPlugins()
@@ -1868,7 +1868,7 @@ namespace SDRSharp
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-        
+
             foreach (string key in sharpPlugins.Keys)
             {
                 try

@@ -182,7 +182,7 @@ namespace SDRSharp.FrequencyManager
             memoryEntry.FilterBandwidth = _controlInterface.FilterBandwidth;
             memoryEntry.Shift = _controlInterface.FrequencyShiftEnabled ? _controlInterface.FrequencyShift : 0;
 
-            memoryEntry.GroupName = "Misc";
+            memoryEntry.GroupName = comboGroups.SelectedItem.ToString();
             if (_controlInterface.DetectorType == DetectorType.WFM)
             {
                 var stationName = _controlInterface.RdsProgramService.Trim();

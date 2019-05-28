@@ -12,7 +12,7 @@ namespace SDRSharp.WavRecorder
         private readonly ISharpControl _control;
         private readonly RecordingIQObserver _iqObserver = new RecordingIQObserver();
         private readonly RecordingAudioProcessor _audioProcessor = new RecordingAudioProcessor();
-        
+
         private readonly SimpleRecorder _audioRecorder;
         private readonly SimpleRecorder _basebandRecorder;
 
@@ -25,7 +25,7 @@ namespace SDRSharp.WavRecorder
             InitializeComponent();
 
             _control = control;
-            
+
             _audioProcessor.Bypass = true;
             _iqObserver.Enabled = false;
 
@@ -76,7 +76,7 @@ namespace SDRSharp.WavRecorder
                 PrepareRecorder();
 
                 try
-                {                    
+                {
                     if (audioCb.Checked)
                     {
                         _audioRecorder.StartRecording();
@@ -92,14 +92,14 @@ namespace SDRSharp.WavRecorder
                     _basebandRecorder.StopRecording();
 
                     MessageBox.Show("Unable to start recording", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                     return;
                 }
 
                 _startTime = DateTime.Now;
             }
             else
-            {                
+            {
                 if (_audioRecorder.IsRecording)
                 {
                     _audioRecorder.StopRecording();
@@ -145,7 +145,7 @@ namespace SDRSharp.WavRecorder
         {
             _wavSampleFormat = (WavSampleFormat)sampleFormatCombo.SelectedIndex;
         }
-        
+
         #endregion
 
         #region GUI Configuration
@@ -182,11 +182,11 @@ namespace SDRSharp.WavRecorder
         }
 
         #endregion
-        
+
         private string MakeFileName(RecordingMode mode, DateTime time)
         {
-            var tunedfrequency = mode == RecordingMode.Baseband ? Math.Abs(_control.CenterFrequency + (_control.FrequencyShiftEnabled ? _control.FrequencyShift : 0)) : Math.Max(_control.Frequency, 0);                       
-            
+            var tunedfrequency = mode == RecordingMode.Baseband ? Math.Abs(_control.CenterFrequency + (_control.FrequencyShiftEnabled ? _control.FrequencyShift : 0)) : Math.Max(_control.Frequency, 0);
+
             var frequency = tunedfrequency >= 1000 ? (tunedfrequency / 1000L) : tunedfrequency;
 
             var unit = tunedfrequency >= 1000 ? "kHz" : "Hz";
@@ -221,7 +221,7 @@ namespace SDRSharp.WavRecorder
         }
 
         public void AbortRecording()
-        {            
+        {
             if (_audioRecorder != null)
             {
                 _audioRecorder.StopRecording();

@@ -22,7 +22,7 @@ namespace SDRSharp.FrequencyEdit
         private const int DigitCount = 10;
         private const int DigitImageSplitCount = 12;
         private const int DigitSeperatorCount = DigitCount - 1 / 3;
-        
+
         public event EventHandler FrequencyChanged;
         public event EventHandler<FrequencyChangingEventArgs> FrequencyChanging;
 
@@ -33,8 +33,8 @@ namespace SDRSharp.FrequencyEdit
         private readonly Timer _renderTimer = new Timer();
         private readonly FrequencyChangingEventArgs _frequencyChangingEventArgs = new FrequencyChangingEventArgs();
         private long _frequency;
-        private long _newFrequency;      
-        private int _stepSize;        
+        private long _newFrequency;
+        private int _stepSize;
         private int _editModePosition;
         private bool _changingEntryMode;
         private EntryMode _currentEntryMode;
@@ -139,8 +139,8 @@ namespace SDRSharp.FrequencyEdit
             var xPos = 0;
             var yPos = 0;
 
-            var digitWidth = _imageList.ImageSize.Width;
-            var digitHeight = _imageList.ImageSize.Height;
+            var digitWidth = _imageList.ImageSize.Width + _imageList.ImageSize.Width/10;
+            var digitHeight = _imageList.ImageSize.Height + _imageList.ImageSize.Height/10;
 
             for (var i = DigitCount-1; i >= 0; i--)
             {
@@ -155,7 +155,7 @@ namespace SDRSharp.FrequencyEdit
                     separator.Height = digitHeight;
                     separator.Location = new Point(xPos, yPos);
                     Controls.Add(separator);
-                                        
+
                     _separatorControls[seperatorIndex] = separator;
 
                     xPos += seperatorWidth + 2;
@@ -166,7 +166,7 @@ namespace SDRSharp.FrequencyEdit
                 frequencyEditDigit.Location = new Point(xPos, yPos);
                 frequencyEditDigit.OnDigitClick += DigitClickHandler;
                 frequencyEditDigit.MouseLeave += DigitMouseLeave;
-                                                
+
                 frequencyEditDigit.Width = digitWidth;
                 frequencyEditDigit.Height = digitHeight;
                 frequencyEditDigit.ImageList = _imageList;
@@ -180,8 +180,8 @@ namespace SDRSharp.FrequencyEdit
             long weight = 1L;
             for (var i = 0; i < DigitCount; i++)
             {
-                _digitControls[i].Weight = weight;                
-                weight *= 10;                
+                _digitControls[i].Weight = weight;
+                weight *= 10;
             }
             Height = digitHeight;
 
@@ -222,7 +222,7 @@ namespace SDRSharp.FrequencyEdit
 
         private void DigitClickHandler(object sender, FrequencyEditDigitClickEventArgs args)
         {
-            
+
             if (_currentEntryMode != EntryMode.None)
             {
                 LeaveEntryMode();
@@ -281,7 +281,7 @@ namespace SDRSharp.FrequencyEdit
             {
                 var oldDigit = digit.DisplayedDigit;
                 var newDigit = digit.DisplayedDigit == 9 ? 0 : digit.DisplayedDigit + 1;
-            
+
                 var newFrequency = (_newFrequency - (oldDigit * digit.Weight)) + (newDigit * digit.Weight);
 
                 if (updateDigit)
@@ -313,8 +313,8 @@ namespace SDRSharp.FrequencyEdit
                 _newFrequency = newFrequency;
 
                 if (oldDigit == 0 && index < DigitCount - 1)
-                {                                        
-                    var needDecrement = (_newFrequency > Math.Pow(10, index + 1));                                       
+                {
+                    var needDecrement = (_newFrequency > Math.Pow(10, index + 1));
                     if (needDecrement)
                     {
                         DecrementDigit(index + 1, updateDigit);
@@ -353,23 +353,23 @@ namespace SDRSharp.FrequencyEdit
         private void UpdateDigitMask()
         {
             var frequency = _frequency;
-            
+
             if (frequency >= 0)
             {
                 for (var i = 1; i < DigitCount; i++)
-                {                    
+                {
                     if ((i + 1) % 3 == 0 && i != DigitCount - 1)
-                    {                        
+                    {
                         var separatorIndex = i / 3;
                         if (_separatorControls[separatorIndex] != null)
                         {
                             _separatorControls[separatorIndex].Masked = (_digitControls[i + 1].Weight > frequency);
                         }
-                    }                    
+                    }
                     if (_digitControls[i] != null)
                     {
-                        _digitControls[i].Masked = (_digitControls[i].Weight > frequency);                        
-                    }                    
+                        _digitControls[i].Masked = (_digitControls[i].Weight > frequency);
+                    }
                 }
             }
         }
@@ -446,14 +446,14 @@ namespace SDRSharp.FrequencyEdit
                     }
                 }
             }
-            
-            ZeroDigits(_digitControls.Length - 1);            
+
+            ZeroDigits(_digitControls.Length - 1);
             _currentEntryMode = EntryMode.Direct;
             _changingEntryMode = false;
         }
-        
-        
-        
+
+
+
         private void DirectModeHandler(KeyEventArgs args)
         {
             switch (args.KeyCode)
@@ -516,7 +516,7 @@ namespace SDRSharp.FrequencyEdit
                         _digitControls[_editModePosition].Highlight = true;
                     }
                     break;
-                case Keys.Tab:                
+                case Keys.Tab:
                 case Keys.Decimal:
                 case Keys.OemPeriod:
                     _digitControls[_editModePosition].Highlight = false;
@@ -542,7 +542,7 @@ namespace SDRSharp.FrequencyEdit
                 case Keys.Enter:
                     LeaveEntryMode();
                     break;
-            }            
+            }
         }
 
         #endregion
@@ -564,16 +564,16 @@ namespace SDRSharp.FrequencyEdit
                     if (_digitControls[i].CursorInside)
                     {
                         _editModePosition = i;
-                        _digitControls[i].Highlight = true;            
+                        _digitControls[i].Highlight = true;
                     }
                 }
-            }            
+            }
             _currentEntryMode = EntryMode.Arrow;
             _changingEntryMode = false;
         }
 
         private void ArrowModeHandler(KeyEventArgs args)
-        {            
+        {
             switch (args.KeyCode)
             {
                 case Keys.Up:
@@ -621,7 +621,7 @@ namespace SDRSharp.FrequencyEdit
         #endregion
 
         private void AbortEntryMode()
-        {            
+        {
             if (_changingEntryMode)
             {
                 return;
@@ -634,7 +634,7 @@ namespace SDRSharp.FrequencyEdit
         }
 
         private void LeaveEntryMode()
-        {            
+        {
             if (_changingEntryMode)
             {
                 return;
@@ -651,12 +651,12 @@ namespace SDRSharp.FrequencyEdit
         }
 
         private bool DigitKeyHandler(KeyEventArgs args)
-        {                     
+        {
             if (!ClientRectangle.Contains(PointToClient(MousePosition)) || _changingEntryMode)
             {
                 return false;
             }
-            
+
             if (_currentEntryMode != EntryMode.None)
             {
                 switch (_currentEntryMode)
@@ -702,17 +702,17 @@ namespace SDRSharp.FrequencyEdit
                     var result = long.TryParse(Clipboard.GetText(), out newFrequency);
                     if (result)
                     {
-                        SetFrequencyValue(newFrequency);           
+                        SetFrequencyValue(newFrequency);
                     }
                     return true;
                 }
             }
-            
+
             return false;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {        
+        {
             const int WM_KEYDOWN = 0x100;
             const int WM_SYSKEYDOWN = 0x104;
 
@@ -722,7 +722,7 @@ namespace SDRSharp.FrequencyEdit
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-        
+
         #endregion
     }
 

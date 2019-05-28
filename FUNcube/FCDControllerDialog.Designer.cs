@@ -71,27 +71,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyCorrectionNumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // IFGainModeLabel
-            // 
+            //
             this.IFGainModeLabel.AutoSize = true;
             this.IFGainModeLabel.Location = new System.Drawing.Point(244, 144);
             this.IFGainModeLabel.Name = "IFGainModeLabel";
             this.IFGainModeLabel.Size = new System.Drawing.Size(68, 13);
             this.IFGainModeLabel.TabIndex = 119;
             this.IFGainModeLabel.Text = "IF gain mode";
-            // 
+            //
             // BiasCurrentLabel
-            // 
+            //
             this.BiasCurrentLabel.AutoSize = true;
             this.BiasCurrentLabel.Location = new System.Drawing.Point(148, 144);
             this.BiasCurrentLabel.Name = "BiasCurrentLabel";
             this.BiasCurrentLabel.Size = new System.Drawing.Size(63, 13);
             this.BiasCurrentLabel.TabIndex = 118;
             this.BiasCurrentLabel.Text = "Bias current";
-            // 
+            //
             // IFGainModeComboBox
-            // 
+            //
             this.IFGainModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFGainModeComboBox.FormattingEnabled = true;
             this.IFGainModeComboBox.Items.AddRange(new object[] {
@@ -102,9 +102,9 @@
             this.IFGainModeComboBox.Size = new System.Drawing.Size(91, 21);
             this.IFGainModeComboBox.TabIndex = 15;
             this.IFGainModeComboBox.SelectedIndexChanged += new System.EventHandler(this.IFGainModeComboBox_SelectedIndexChanged);
-            // 
+            //
             // BiasCurrentComboBox
-            // 
+            //
             this.BiasCurrentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BiasCurrentComboBox.FormattingEnabled = true;
             this.BiasCurrentComboBox.Items.AddRange(new object[] {
@@ -117,27 +117,27 @@
             this.BiasCurrentComboBox.Size = new System.Drawing.Size(90, 21);
             this.BiasCurrentComboBox.TabIndex = 14;
             this.BiasCurrentComboBox.SelectedIndexChanged += new System.EventHandler(this.BiasCurrentComboBox_SelectedIndexChanged);
-            // 
+            //
             // BandLabel
-            // 
+            //
             this.BandLabel.AutoSize = true;
             this.BandLabel.Location = new System.Drawing.Point(88, 144);
             this.BandLabel.Name = "BandLabel";
             this.BandLabel.Size = new System.Drawing.Size(32, 13);
             this.BandLabel.TabIndex = 115;
             this.BandLabel.Text = "Band";
-            // 
+            //
             // LNAEnhanceLabel
-            // 
+            //
             this.LNAEnhanceLabel.AutoSize = true;
             this.LNAEnhanceLabel.Location = new System.Drawing.Point(9, 144);
             this.LNAEnhanceLabel.Name = "LNAEnhanceLabel";
             this.LNAEnhanceLabel.Size = new System.Drawing.Size(73, 13);
             this.LNAEnhanceLabel.TabIndex = 114;
             this.LNAEnhanceLabel.Text = "LNA enhance";
-            // 
+            //
             // BandComboBox
-            // 
+            //
             this.BandComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BandComboBox.Enabled = false;
             this.BandComboBox.FormattingEnabled = true;
@@ -150,9 +150,9 @@
             this.BandComboBox.Name = "BandComboBox";
             this.BandComboBox.Size = new System.Drawing.Size(57, 21);
             this.BandComboBox.TabIndex = 13;
-            // 
+            //
             // LNAEnhanceComboBox
-            // 
+            //
             this.LNAEnhanceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LNAEnhanceComboBox.FormattingEnabled = true;
             this.LNAEnhanceComboBox.Items.AddRange(new object[] {
@@ -166,9 +166,9 @@
             this.LNAEnhanceComboBox.Size = new System.Drawing.Size(70, 21);
             this.LNAEnhanceComboBox.TabIndex = 12;
             this.LNAEnhanceComboBox.SelectedIndexChanged += new System.EventHandler(this.LNAEnhanceComboBox_SelectedIndexChanged);
-            // 
+            //
             // DefaultButton
-            // 
+            //
             this.DefaultButton.Location = new System.Drawing.Point(676, 205);
             this.DefaultButton.Name = "DefaultButton";
             this.DefaultButton.Size = new System.Drawing.Size(75, 23);
@@ -176,9 +176,9 @@
             this.DefaultButton.Text = "Default";
             this.DefaultButton.UseVisualStyleBackColor = true;
             this.DefaultButton.Click += new System.EventHandler(this.DefaultButton_Click);
-            // 
+            //
             // IFGain6ComboBox
-            // 
+            //
             this.IFGain6ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFGain6ComboBox.FormattingEnabled = true;
             this.IFGain6ComboBox.Items.AddRange(new object[] {
@@ -192,36 +192,36 @@
             this.IFGain6ComboBox.Size = new System.Drawing.Size(70, 21);
             this.IFGain6ComboBox.TabIndex = 11;
             this.IFGain6ComboBox.SelectedIndexChanged += new System.EventHandler(this.IFGain6ComboBox_SelectedIndexChanged);
-            // 
+            //
             // IFGain6Label
-            // 
+            //
             this.IFGain6Label.AutoSize = true;
             this.IFGain6Label.Location = new System.Drawing.Point(759, 143);
             this.IFGain6Label.Name = "IFGain6Label";
             this.IFGain6Label.Size = new System.Drawing.Size(48, 13);
             this.IFGain6Label.TabIndex = 102;
             this.IFGain6Label.Text = "IF gain 6";
-            // 
+            //
             // RFFilterLabel
-            // 
+            //
             this.RFFilterLabel.AutoSize = true;
             this.RFFilterLabel.Location = new System.Drawing.Point(85, 102);
             this.RFFilterLabel.Name = "RFFilterLabel";
             this.RFFilterLabel.Size = new System.Drawing.Size(43, 13);
             this.RFFilterLabel.TabIndex = 110;
             this.RFFilterLabel.Text = "RF filter";
-            // 
+            //
             // IFGain5Label
-            // 
+            //
             this.IFGain5Label.AutoSize = true;
             this.IFGain5Label.Location = new System.Drawing.Point(759, 102);
             this.IFGain5Label.Name = "IFGain5Label";
             this.IFGain5Label.Size = new System.Drawing.Size(48, 13);
             this.IFGain5Label.TabIndex = 100;
             this.IFGain5Label.Text = "IF gain 5";
-            // 
+            //
             // IFGain5ComboBox
-            // 
+            //
             this.IFGain5ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFGain5ComboBox.FormattingEnabled = true;
             this.IFGain5ComboBox.Items.AddRange(new object[] {
@@ -235,27 +235,27 @@
             this.IFGain5ComboBox.Size = new System.Drawing.Size(70, 21);
             this.IFGain5ComboBox.TabIndex = 10;
             this.IFGain5ComboBox.SelectedIndexChanged += new System.EventHandler(this.IFGain5ComboBox_SelectedIndexChanged);
-            // 
+            //
             // LNAGainLabel
-            // 
+            //
             this.LNAGainLabel.AutoSize = true;
             this.LNAGainLabel.Location = new System.Drawing.Point(9, 102);
             this.LNAGainLabel.Name = "LNAGainLabel";
             this.LNAGainLabel.Size = new System.Drawing.Size(51, 13);
             this.LNAGainLabel.TabIndex = 109;
             this.LNAGainLabel.Text = "LNA gain";
-            // 
+            //
             // IFFilterLabel
-            // 
+            //
             this.IFFilterLabel.AutoSize = true;
             this.IFFilterLabel.Location = new System.Drawing.Point(654, 102);
             this.IFFilterLabel.Name = "IFFilterLabel";
             this.IFFilterLabel.Size = new System.Drawing.Size(38, 13);
             this.IFFilterLabel.TabIndex = 98;
             this.IFFilterLabel.Text = "IF filter";
-            // 
+            //
             // IFFilterComboBox
-            // 
+            //
             this.IFFilterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFFilterComboBox.FormattingEnabled = true;
             this.IFFilterComboBox.Items.AddRange(new object[] {
@@ -296,9 +296,9 @@
             this.IFFilterComboBox.Size = new System.Drawing.Size(88, 21);
             this.IFFilterComboBox.TabIndex = 9;
             this.IFFilterComboBox.SelectedIndexChanged += new System.EventHandler(this.IFFilterComboBox_SelectedIndexChanged);
-            // 
+            //
             // RFFilterComboBox
-            // 
+            //
             this.RFFilterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RFFilterComboBox.FormattingEnabled = true;
             this.RFFilterComboBox.Items.AddRange(new object[] {
@@ -309,9 +309,9 @@
             this.RFFilterComboBox.Size = new System.Drawing.Size(87, 21);
             this.RFFilterComboBox.TabIndex = 1;
             this.RFFilterComboBox.SelectedIndexChanged += new System.EventHandler(this.RFFilterComboBox_SelectedIndexChanged);
-            // 
+            //
             // LNAGainComboBox
-            // 
+            //
             this.LNAGainComboBox.DisplayMember = "1";
             this.LNAGainComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LNAGainComboBox.FormattingEnabled = true;
@@ -334,27 +334,27 @@
             this.LNAGainComboBox.Size = new System.Drawing.Size(70, 21);
             this.LNAGainComboBox.TabIndex = 0;
             this.LNAGainComboBox.SelectedIndexChanged += new System.EventHandler(this.LNAGainComboBox_SelectedIndexChanged);
-            // 
+            //
             // IFGain4Label
-            // 
+            //
             this.IFGain4Label.AutoSize = true;
             this.IFGain4Label.Location = new System.Drawing.Point(568, 187);
             this.IFGain4Label.Name = "IFGain4Label";
             this.IFGain4Label.Size = new System.Drawing.Size(48, 13);
             this.IFGain4Label.TabIndex = 106;
             this.IFGain4Label.Text = "IF gain 4";
-            // 
+            //
             // IFGain3Label
-            // 
+            //
             this.IFGain3Label.AutoSize = true;
             this.IFGain3Label.Location = new System.Drawing.Point(568, 144);
             this.IFGain3Label.Name = "IFGain3Label";
             this.IFGain3Label.Size = new System.Drawing.Size(48, 13);
             this.IFGain3Label.TabIndex = 105;
             this.IFGain3Label.Text = "IF gain 3";
-            // 
+            //
             // IFRCFilterComboBox
-            // 
+            //
             this.IFRCFilterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFRCFilterComboBox.FormattingEnabled = true;
             this.IFRCFilterComboBox.Items.AddRange(new object[] {
@@ -379,36 +379,36 @@
             this.IFRCFilterComboBox.Size = new System.Drawing.Size(84, 21);
             this.IFRCFilterComboBox.TabIndex = 5;
             this.IFRCFilterComboBox.SelectedIndexChanged += new System.EventHandler(this.IFRCFilterComboBox_SelectedIndexChanged);
-            // 
+            //
             // IFRCFilterLabel
-            // 
+            //
             this.IFRCFilterLabel.AutoSize = true;
             this.IFRCFilterLabel.Location = new System.Drawing.Point(464, 102);
             this.IFRCFilterLabel.Name = "IFRCFilterLabel";
             this.IFRCFilterLabel.Size = new System.Drawing.Size(56, 13);
             this.IFRCFilterLabel.TabIndex = 94;
             this.IFRCFilterLabel.Text = "IF RC filter";
-            // 
+            //
             // IFGain2Label
-            // 
+            //
             this.IFGain2Label.AutoSize = true;
             this.IFGain2Label.Location = new System.Drawing.Point(568, 102);
             this.IFGain2Label.Name = "IFGain2Label";
             this.IFGain2Label.Size = new System.Drawing.Size(48, 13);
             this.IFGain2Label.TabIndex = 104;
             this.IFGain2Label.Text = "IF gain 2";
-            // 
+            //
             // IFGain1Label
-            // 
+            //
             this.IFGain1Label.AutoSize = true;
             this.IFGain1Label.Location = new System.Drawing.Point(388, 102);
             this.IFGain1Label.Name = "IFGain1Label";
             this.IFGain1Label.Size = new System.Drawing.Size(48, 13);
             this.IFGain1Label.TabIndex = 93;
             this.IFGain1Label.Text = "IF gain 1";
-            // 
+            //
             // IFGain1ComboBox
-            // 
+            //
             this.IFGain1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFGain1ComboBox.FormattingEnabled = true;
             this.IFGain1ComboBox.Items.AddRange(new object[] {
@@ -419,9 +419,9 @@
             this.IFGain1ComboBox.Size = new System.Drawing.Size(70, 21);
             this.IFGain1ComboBox.TabIndex = 4;
             this.IFGain1ComboBox.SelectedIndexChanged += new System.EventHandler(this.IFGain1ComboBox_SelectedIndexChanged);
-            // 
+            //
             // IFGain4ComboBox
-            // 
+            //
             this.IFGain4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFGain4ComboBox.FormattingEnabled = true;
             this.IFGain4ComboBox.Items.AddRange(new object[] {
@@ -433,18 +433,18 @@
             this.IFGain4ComboBox.Size = new System.Drawing.Size(74, 21);
             this.IFGain4ComboBox.TabIndex = 8;
             this.IFGain4ComboBox.SelectedIndexChanged += new System.EventHandler(this.IFGain4ComboBox_SelectedIndexChanged);
-            // 
+            //
             // MixerFilterLabel
-            // 
+            //
             this.MixerFilterLabel.AutoSize = true;
             this.MixerFilterLabel.Location = new System.Drawing.Point(282, 102);
             this.MixerFilterLabel.Name = "MixerFilterLabel";
             this.MixerFilterLabel.Size = new System.Drawing.Size(54, 13);
             this.MixerFilterLabel.TabIndex = 92;
             this.MixerFilterLabel.Text = "Mixer filter";
-            // 
+            //
             // IFGain3ComboBox
-            // 
+            //
             this.IFGain3ComboBox.DisplayMember = "1";
             this.IFGain3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFGain3ComboBox.FormattingEnabled = true;
@@ -458,9 +458,9 @@
             this.IFGain3ComboBox.Size = new System.Drawing.Size(74, 21);
             this.IFGain3ComboBox.TabIndex = 7;
             this.IFGain3ComboBox.SelectedIndexChanged += new System.EventHandler(this.IFGain3ComboBox_SelectedIndexChanged);
-            // 
+            //
             // mixerFilterComboBox
-            // 
+            //
             this.mixerFilterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mixerFilterComboBox.FormattingEnabled = true;
             this.mixerFilterComboBox.Items.AddRange(new object[] {
@@ -478,18 +478,18 @@
             this.mixerFilterComboBox.Size = new System.Drawing.Size(87, 21);
             this.mixerFilterComboBox.TabIndex = 3;
             this.mixerFilterComboBox.SelectedIndexChanged += new System.EventHandler(this.mixerFilterComboBox_SelectedIndexChanged);
-            // 
+            //
             // MixerGainLabel
-            // 
+            //
             this.MixerGainLabel.AutoSize = true;
             this.MixerGainLabel.Location = new System.Drawing.Point(191, 102);
             this.MixerGainLabel.Name = "MixerGainLabel";
             this.MixerGainLabel.Size = new System.Drawing.Size(55, 13);
             this.MixerGainLabel.TabIndex = 91;
             this.MixerGainLabel.Text = "Mixer gain";
-            // 
+            //
             // IFGain2ComboBox
-            // 
+            //
             this.IFGain2ComboBox.DisplayMember = "1";
             this.IFGain2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IFGain2ComboBox.FormattingEnabled = true;
@@ -503,9 +503,9 @@
             this.IFGain2ComboBox.Size = new System.Drawing.Size(74, 21);
             this.IFGain2ComboBox.TabIndex = 6;
             this.IFGain2ComboBox.SelectedIndexChanged += new System.EventHandler(this.IFGain2ComboBox_SelectedIndexChanged);
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2, 3);
@@ -513,9 +513,9 @@
             this.pictureBox1.Size = new System.Drawing.Size(836, 95);
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
-            // 
+            //
             // mixerGainComboBox
-            // 
+            //
             this.mixerGainComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mixerGainComboBox.FormattingEnabled = true;
             this.mixerGainComboBox.Items.AddRange(new object[] {
@@ -526,14 +526,14 @@
             this.mixerGainComboBox.Size = new System.Drawing.Size(74, 21);
             this.mixerGainComboBox.TabIndex = 2;
             this.mixerGainComboBox.SelectedIndexChanged += new System.EventHandler(this.mixerGainComboBox_SelectedIndexChanged);
-            // 
+            //
             // refreshTimer
-            // 
+            //
             this.refreshTimer.Interval = 1000;
             this.refreshTimer.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
+            //
             // closeButton
-            // 
+            //
             this.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.closeButton.Location = new System.Drawing.Point(757, 205);
             this.closeButton.Name = "closeButton";
@@ -542,18 +542,18 @@
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(341, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 13);
             this.label1.TabIndex = 122;
             this.label1.Text = "Frequency correction (ppm)";
-            // 
+            //
             // frequencyCorrectionNumericUpDown
-            // 
+            //
             this.frequencyCorrectionNumericUpDown.DecimalPlaces = 1;
             this.frequencyCorrectionNumericUpDown.Increment = new decimal(new int[] {
             1,
@@ -574,16 +574,16 @@
             this.frequencyCorrectionNumericUpDown.Name = "frequencyCorrectionNumericUpDown";
             this.frequencyCorrectionNumericUpDown.Size = new System.Drawing.Size(133, 20);
             this.frequencyCorrectionNumericUpDown.TabIndex = 16;
-            this.frequencyCorrectionNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.frequencyCorrectionNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.frequencyCorrectionNumericUpDown.Value = new decimal(new int[] {
             115,
             0,
             0,
             -2147483648});
             this.frequencyCorrectionNumericUpDown.ValueChanged += new System.EventHandler(this.frequencyCorrectionNumericUpDown_ValueChanged);
-            // 
+            //
             // FCDControllerDialog
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.closeButton;
@@ -686,4 +686,3 @@
         private System.Windows.Forms.NumericUpDown frequencyCorrectionNumericUpDown;
     }
 }
-
